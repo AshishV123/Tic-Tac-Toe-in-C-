@@ -124,12 +124,14 @@ void grid()
 }
 int turn(int a)
 {int n,i=0;
-    cout<<endl<<"Player "<<a<<" Turn:";
+    cout<<endl<<"Choose btw 1-9"<<endl<<endl<<"Player "<<a<<" Turn:";
+    cin.clear();
     cin>>n;
     if(n>9||n<1)
     {
         cout<<"Invalid Move"<<endl<<endl<<"Press Enter to continue";
         getch();
+        fflush(stdin);
         system("cls");
         return 0;
     }
@@ -139,6 +141,7 @@ int turn(int a)
         {
              cout<<"Invalid Move"<<endl<<endl<<"Press Enter to continue";
             getch();
+        fflush(stdin);
             system("cls");
             return 0;
         }
